@@ -1,19 +1,15 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.scss';
-import Header from './Components/Header';
-import CoinPage from './Pages/CoinPage';
-import HomePage from './Pages/HomePage';
+import { BrowserRouter } from 'react-router-dom';
+import './App.css';
+import Header from './Components/Header'
 
 function App() {
 
   return (
-    <>
-      <Header />
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/coin/:id' element={<CoinPage />} />
-      </Routes>
-    </>
+    <BrowserRouter>
+      <div>
+        <Header />
+      </div>
+    </BrowserRouter>
   );
 }
 
