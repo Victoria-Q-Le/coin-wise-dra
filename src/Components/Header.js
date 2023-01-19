@@ -1,10 +1,11 @@
+import { AppBar, Container } from '@material-ui/core'
 import React from 'react'
 
 const Header = () => {
   return (
-    <div>
-      This is the Header
-    </div>
+    <AppBar color='transparent' position='static'>
+      <Container></Container>
+    </AppBar>
   )
 }
 
