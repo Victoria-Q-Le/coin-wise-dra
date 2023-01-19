@@ -1,5 +1,6 @@
 import { AppBar, Container, makeStyles, MenuItem, Select, Toolbar, Typography } from '@material-ui/core'
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles(() => ({
   title: {
@@ -16,12 +17,19 @@ const Header = () => {
 
   const classes = useStyles()
 
+  const history = useHistory()
+
   return (
     <AppBar color='transparent' position='static'>
       <Container>
         <Toolbar>
           
-          <Typography className={classes.title}>Coin Wise</Typography>
+          <Typography 
+            className={classes.title} 
+            onClick = {() => history.push("/")}
+          >
+            Coin Wise
+          </Typography>
 
           <Select
             variant='outlined'
